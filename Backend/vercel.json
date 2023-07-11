@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "server.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/api/nightlife/(.*)", "dest": "server.js" },
+    { "src": "/api/historical/(.*)", "dest": "server.js" },
+    { "src": "/api/shopping/(.*)", "dest": "server.js" },
+    { "src": "/api/foods/(.*)", "dest": "server.js" },
+    { "src": "/api/reviews/(.*)", "dest": "server.js" },
+    { "src": "/api/adventure/(.*)", "dest": "server.js" },
+    { "src": "/api/adventureReviews/(.*)", "dest": "server.js" },
+    { "src": "/(.*)", "dest": "server.js" }
+  ],
+  "env": {
+    "MONGODB_URI": "mongodb+srv://maldolt:Pikachu1!@cluster0.5nvxwp6.mongodb.net/",
+  }
+}
